@@ -2,7 +2,11 @@
 	"Keyboard": "ergodox",
 	"Board": "raytac_mdbt50q_rx_green",
 	"Shield": "slicemk_ergodox_dongle",
-	"Kconfig": null,
+	"Kconfig": {
+            "CONFIG_ZMK_SPLIT_BLE_PREF_INT": "6",
+            "CONFIG_ZMK_SPLIT_BLE_PREF_LATENCY": "30",
+            "CONFIG_ZMK_SPLIT_BLE_PREF_TIMEOUT": "400"
+        },
 	"Advanced": {
 		"Logging": "",
 		"KRO": "",
