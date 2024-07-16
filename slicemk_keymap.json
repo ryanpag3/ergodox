@@ -1,17 +1,15 @@
 {
+	"Modified": "2024-07-16T17:48:49.024941809Z",
 	"Keyboard": "ergodox",
 	"Board": "raytac_mdbt50q_rx_green",
 	"Shield": "slicemk_ergodox_dongle",
-	"Kconfig": {
-		"CONFIG_ZMK_SPLIT_BLE_PREF_INT": "6",
-		"CONFIG_ZMK_SPLIT_BLE_PREF_LATENCY": "30",
-		"CONFIG_ZMK_SPLIT_BLE_PREF_TIMEOUT": "400"
-	},
+	"Kconfig": {},
 	"Advanced": {
 		"Logging": "",
 		"KRO": "",
 		"MouseMove": "",
-		"MouseScroll": ""
+		"MouseScroll": "",
+		"BTParams": ""
 	},
 	"Layers": [
 		{
@@ -1469,10 +1467,12 @@
 					"Args": []
 				},
 				{
-					"Name": "",
-					"Behavior": "&trans",
+					"Name": "USB",
+					"Behavior": "$custom",
 					"Notes": "",
-					"Args": []
+					"Args": [
+						"&out OUT_USB"
+					]
 				},
 				{
 					"Name": "",
@@ -1541,34 +1541,44 @@
 					"Args": []
 				},
 				{
-					"Name": "",
-					"Behavior": "&trans",
+					"Name": "BT0",
+					"Behavior": "$custom",
 					"Notes": "",
-					"Args": []
+					"Args": [
+						"&btprofile0"
+					]
 				},
 				{
-					"Name": "",
-					"Behavior": "&trans",
+					"Name": "BT1",
+					"Behavior": "$custom",
 					"Notes": "",
-					"Args": []
+					"Args": [
+						"&btprofile1"
+					]
 				},
 				{
-					"Name": "",
-					"Behavior": "&trans",
+					"Name": "BT2",
+					"Behavior": "$custom",
 					"Notes": "",
-					"Args": []
+					"Args": [
+						"&btprofile2"
+					]
 				},
 				{
-					"Name": "",
-					"Behavior": "&trans",
+					"Name": "BT3",
+					"Behavior": "$custom",
 					"Notes": "",
-					"Args": []
+					"Args": [
+						"&btprofile3"
+					]
 				},
 				{
-					"Name": "",
-					"Behavior": "&trans",
+					"Name": "BT4",
+					"Behavior": "$custom",
 					"Notes": "",
-					"Args": []
+					"Args": [
+						"&btprofile4"
+					]
 				},
 				{
 					"Name": "",
@@ -2581,5 +2591,5 @@
 			]
 		}
 	],
-	"Custom": ""
+	"Custom": "/ {\nZMK_MACRO(btprofile0, wait-ms = <10>; tap-ms = <10>; bindings = <&macro_tap &bt BT_SEL 0>, <&macro_tap &out OUT_BLE>;)\nZMK_MACRO(btprofile1, wait-ms = <10>; tap-ms = <10>; bindings = <&macro_tap &bt BT_SEL 1>, <&macro_tap &out OUT_BLE>;)\nZMK_MACRO(btprofile2, wait-ms = <10>; tap-ms = <10>; bindings = <&macro_tap &bt BT_SEL 2>, <&macro_tap &out OUT_BLE>;)\nZMK_MACRO(btprofile3, wait-ms = <10>; tap-ms = <10>; bindings = <&macro_tap &bt BT_SEL 3>, <&macro_tap &out OUT_BLE>;)\nZMK_MACRO(btprofile4, wait-ms = <10>; tap-ms = <10>; bindings = <&macro_tap &bt BT_SEL 4>, <&macro_tap &out OUT_BLE>;)\n};"
 }
