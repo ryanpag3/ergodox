@@ -1,5 +1,5 @@
 {
-	"Modified": "2024-07-16T17:48:49.024941809Z",
+	"Modified": "2024-07-27T03:25:14.067236595Z",
 	"Keyboard": "ergodox",
 	"Board": "raytac_mdbt50q_rx_green",
 	"Shield": "slicemk_ergodox_dongle",
@@ -1461,10 +1461,12 @@
 					"Args": []
 				},
 				{
-					"Name": "",
-					"Behavior": "&trans",
+					"Name": "USB",
+					"Behavior": "$custom",
 					"Notes": "",
-					"Args": []
+					"Args": [
+						"&out OUT_USB"
+					]
 				},
 				{
 					"Name": "USB",
@@ -1511,34 +1513,44 @@
 					"Args": []
 				},
 				{
-					"Name": "",
-					"Behavior": "&trans",
+					"Name": "BT4",
+					"Behavior": "$custom",
 					"Notes": "",
-					"Args": []
+					"Args": [
+						"&btprofile0"
+					]
 				},
 				{
-					"Name": "",
-					"Behavior": "&trans",
+					"Name": "BT3",
+					"Behavior": "$custom",
 					"Notes": "",
-					"Args": []
+					"Args": [
+						"&btprofile3"
+					]
 				},
 				{
-					"Name": "",
-					"Behavior": "&trans",
+					"Name": "BT2",
+					"Behavior": "$custom",
 					"Notes": "",
-					"Args": []
+					"Args": [
+						"&btprofile2"
+					]
 				},
 				{
-					"Name": "",
-					"Behavior": "&trans",
+					"Name": "BT1",
+					"Behavior": "$custom",
 					"Notes": "",
-					"Args": []
+					"Args": [
+						"&btprofile1"
+					]
 				},
 				{
-					"Name": "",
-					"Behavior": "&trans",
+					"Name": "BT0",
+					"Behavior": "$custom",
 					"Notes": "",
-					"Args": []
+					"Args": [
+						"&btprofile0"
+					]
 				},
 				{
 					"Name": "BT0",
